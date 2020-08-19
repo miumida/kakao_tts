@@ -64,9 +64,19 @@ tts:
 
 <br>
 
+## kakao developers api key
+1. kakao developers에 회원가입을 한 뒤, 로그인 하여 '내 어플리케이션(<https://developers.kakao.com/console/app>)'으로 접속한다.
+2. '어플리케이션 추가하기'를 클릭한다.
+3. '어플리케이션 추가' 팝업이 뜨면 내용(앱 아이콘, 앱 이름, 회사 이름)을 입력하고 저장한다.<br>
+   정보가 정확하지 않은 경우 서비스 이용이 제한될 수 있다고 한다.
+4. 추가된 내 어플리케이션으로 들어가서 '내 애플리케이션 > 앱 설정 > 요약 정보 > 앱키 > REST API 키'를 복사한다.
+5. 복사한 api 키를 설정할 때 입력해준다.
+
+<br>
+
 ## 참고사이트
 [1] Kakao Developers | 음성 합성하기 (<https://developers.kakao.com/docs/latest/ko/voice/rest-api#text-to-speech>)<br>
-[1] Kakao Developers | 카카오 SSML 가이드 (https://developers.kakao.com/assets/guide/kakao_ssml_guide.pdf)<br>
+[2] Kakao Developers | 카카오 SSML 가이드 (https://developers.kakao.com/assets/guide/kakao_ssml_guide.pdf)<br>
 
 [version-shield]: https://img.shields.io/badge/version-v1.0.0-orange.svg
 [hakc-shield]: https://img.shields.io/badge/HAKC-Enjoy-blue.svg
