@@ -5,6 +5,7 @@
 ![Version v1.0.0][version-shield]
 
 카카오 음성합성 API를 이용한 TTS for Home Assistant 입니다.<br>
+사용을 위해서는 kakao developers에서 api key를 발급받아야 합니다.<br>
 <br>
 
 ## Version history
@@ -47,7 +48,7 @@ tts:
 |옵션|내용|
 |--|--|
 |platform| (필수) kakao_tts  |
-|api_key| (필수) Kakao Developers api key |
+|api_key| (필수) kakao developers api key |
 |voice| (옵션) 목소리 |
 
 <br>
