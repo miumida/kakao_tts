@@ -69,9 +69,11 @@ tts:
 2. '어플리케이션 추가하기'를 클릭한다.
 3. '어플리케이션 추가' 팝업이 뜨면 내용(앱 아이콘, 앱 이름, 회사 이름)을 입력하고 저장한다.<br>
    정보가 정확하지 않은 경우 서비스 이용이 제한될 수 있다고 한다.
+   ![app_registry](https://github.com/miumida/kakao_tts/blob/master/images/kakao_developers_app_registry.png?raw=true)<br>
 4. 추가된 내 어플리케이션으로 들어가서 '내 애플리케이션 > 앱 설정 > 요약 정보 > 앱키 > REST API 키'를 복사한다.
 5. 복사한 api 키를 설정할 때 입력해준다.
 6. '내 애플리케이션 > 제품 설정 > 음성 > 활성화 설정'에서 상태를 ON으로 변경해준다.
+![app_tts_on](https://github.com/miumida/kakao_tts/blob/master/images/kakao_developers_app_tts_on.png?raw=true)<br>
 
 <br>
 
