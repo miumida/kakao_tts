@@ -1,0 +1,8 @@
+{
+  "domain": "kakao_tts",
+  "name": "Kakao Text-to-Speech (TTS)",
+  "documentation": "https://github.com/miumida/kakao_tts",
+  "requirements": [],
+  "after_dependencies": ["media_player"],
+  "codeowners": ["@miumida"]
+}
