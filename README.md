@@ -10,7 +10,7 @@
 ## Version history
 | Version | Date        | 내용              |
 | :-----: | :---------: | ----------------------- |
-| v1.0.0  | 2020.08.  | First version  |
+| v1.0.0  | 2020.08.19  | First version  |
 
 <br>
 
