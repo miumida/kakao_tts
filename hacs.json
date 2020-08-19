@@ -1,0 +1,7 @@
+
+{
+  "name": "[KR] KAKAO 음성합성 API TTS,
+  "country": "KR",
+  "domains": ["tts"],
+  "render_readme": true
+}
