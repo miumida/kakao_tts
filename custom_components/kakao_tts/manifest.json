@@ -4,5 +4,6 @@
   "documentation": "https://github.com/miumida/kakao_tts",
   "requirements": [],
   "after_dependencies": ["media_player"],
-  "codeowners": ["@miumida"]
+  "codeowners": ["@miumida"],
+  "version": "1.0.1"
 }
