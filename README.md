@@ -2,7 +2,7 @@
 
 ![HAKC][hakc-shield]
 ![HACS][hacs-shield]
-![Version v1.0.0][version-shield]
+![Version v1.0.1][version-shield]
 
 카카오 음성합성 API를 이용한 TTS for Home Assistant 입니다.<br>
 사용을 위해서는 kakao developers에서 api key를 발급받아야 합니다.<br>
@@ -12,6 +12,7 @@
 | Version | Date        | 내용              |
 | :-----: | :---------: | ----------------------- |
 | v1.0.0  | 2020.08.19  | First version  |
+| v1.0.1  | 2021.03.05  | manifest.json add version information  |
 
 <br>
 
@@ -81,6 +82,6 @@ tts:
 [1] Kakao Developers | 음성 합성하기 (<https://developers.kakao.com/docs/latest/ko/voice/rest-api#text-to-speech>)<br>
 [2] Kakao Developers | 카카오 SSML 가이드 (https://developers.kakao.com/assets/guide/kakao_ssml_guide.pdf)<br>
 
-[version-shield]: https://img.shields.io/badge/version-v1.0.0-orange.svg
+[version-shield]: https://img.shields.io/badge/version-v1.0.1-orange.svg
 [hakc-shield]: https://img.shields.io/badge/HAKC-Enjoy-blue.svg
 [hacs-shield]: https://img.shields.io/badge/HACS-Custom-red.svg
