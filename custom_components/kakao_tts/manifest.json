@@ -5,5 +5,5 @@
   "requirements": [],
   "after_dependencies": ["media_player"],
   "codeowners": ["@miumida"],
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
