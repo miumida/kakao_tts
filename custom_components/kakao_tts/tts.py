@@ -28,16 +28,26 @@ _SUPPORT_VOICES = [
     "MAN_DIALOG_BRIGHT"
 ]
 
+_SUPPORT_VOLUME = [
+    "soft",
+    "medium",
+    "loud"
+]
+
 KAKAO_API_URL = 'https://kakaoi-newtone-openapi.kakao.com/v1/synthesize'
 CONF_KAKAO_API_KEY = "api_key"
 
 CONF_VOICE    = "voice"
 DEFAULT_VOICE = "WOMAN_READ_CALM"
 
+CONF_VOLUME   = "volume"
+DEFAULT_VOLUME = "medium"
+
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
     {
         vol.Required(CONF_KAKAO_API_KEY): cv.string,
         vol.Optional(CONF_VOICE, default=DEFAULT_VOICE): cv.string,
+        vol.Optional(CONF_VOLUME, default=DEFAULT_VOLUME): cv.string,
     }
 )
 
@@ -53,6 +63,7 @@ class KakaoSpeechManager(Provider):
         self._hass     = hass
         self._api_key  = config.get(CONF_KAKAO_API_KEY)
         self._voice    = config.get(CONF_VOICE)
+        self._volume   = config.get(CONF_VOLUME, DEFAULT_VOLUME)
 
         self._headers = {
             'Content-Type' : 'application/xml',
@@ -76,13 +87,21 @@ class KakaoSpeechManager(Provider):
 
         try:
 
-            with async_timeout.timeout(10):
+            with async_timeout.timeout(30):
 
                 s = Speech()
+                #s.voice(message, self._voice)
+
+                # Volume : soft(0.7) / medium(1.0) / loud(1.4)
+                if self._volume != "medium":
+                    message = s.prosody(message, "medium", self._volume, True)
+
+                # Voice
                 s.voice(message, self._voice)
+
                 data = s.speak()
 
-                #_LOGGER.info("### speak() :: " + data)
+                #_LOGGER.error("### speak() :: " + data)
 
                 request = await websession.post(KAKAO_API_URL, data=data.encode('utf-8'), headers=self._headers)
 
