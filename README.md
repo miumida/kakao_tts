@@ -2,7 +2,7 @@
 
 ![HAKC][hakc-shield]
 ![HACS][hacs-shield]
-![Version v1.0.1][version-shield]
+![Version v1.0.2][version-shield]
 
 카카오 음성합성 API를 이용한 TTS for Home Assistant 입니다.<br>
 사용을 위해서는 kakao developers에서 api key를 발급받아야 합니다.<br>
@@ -13,6 +13,7 @@
 | :-----: | :---------: | ----------------------- |
 | v1.0.0  | 2020.08.19  | First version  |
 | v1.0.1  | 2021.03.05  | manifest.json add version information  |
+| v1.0.2  | 2021.08.03  | Volume property add (soft/medium/loud) |
 
 <br>
 
@@ -40,6 +41,7 @@ tts:
   - platform: kakao_tts
     api_key: [your api key]
     voice: 'WOMAN_DIALOG_BRIGHT'
+    volume: 'loud'
 ```
 
 <br>
@@ -51,6 +53,7 @@ tts:
 |platform| (필수) kakao_tts  |
 |api_key| (필수) kakao developers api key |
 |voice| (옵션) 목소리 |
+|volume| (옵션) 볼륨 |
 
 <br>
 
@@ -62,6 +65,16 @@ tts:
 |MAN_READ_CALM | 남성 차분한 낭독체|
 |WOMAN_DIALOG_BRIGHT | 여성 밝은 대화체|
 |MAN_DIALOG_BRIGHT | 남성 밝은 대화체|
+
+<br>
+
+### 볼륨(volume)
+옵션을 조절해서 테스트는 하였지만, 실제로 카카오음성합성에서 정상적으로 처리되는지 구분이 안됨.
+|구분|내용|
+|--|--|
+|soft|0.7|
+|medium | 1.0(default)|
+|loud| 1.4|
 
 <br>
 
@@ -82,6 +95,6 @@ tts:
 [1] Kakao Developers | 음성 합성하기 (<https://developers.kakao.com/docs/latest/ko/voice/rest-api#text-to-speech>)<br>
 [2] Kakao Developers | 카카오 SSML 가이드 (https://developers.kakao.com/assets/guide/kakao_ssml_guide.pdf)<br>
 
-[version-shield]: https://img.shields.io/badge/version-v1.0.1-orange.svg
+[version-shield]: https://img.shields.io/badge/version-v1.0.2-orange.svg
 [hakc-shield]: https://img.shields.io/badge/HAKC-Enjoy-blue.svg
 [hacs-shield]: https://img.shields.io/badge/HACS-Custom-red.svg
