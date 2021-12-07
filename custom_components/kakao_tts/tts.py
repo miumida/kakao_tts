@@ -10,7 +10,7 @@ import os
 import requests
 
 from homeassistant.components.tts import CONF_LANG, PLATFORM_SCHEMA, Provider
-from homeassistant.const import CONF_API_KEY, HTTP_OK
+from homeassistant.const import CONF_API_KEY
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 import homeassistant.helpers.config_validation as cv
 from homeassistant.exceptions import HomeAssistantError
@@ -105,7 +105,7 @@ class KakaoSpeechManager(Provider):
 
                 request = await websession.post(KAKAO_API_URL, data=data.encode('utf-8'), headers=self._headers)
 
-                if request.status != HTTP_OK:
+                if request.status != 200:
                     _LOGGER.error(
                         "Error %d on load URL %s", request.status, request.url
                     )
